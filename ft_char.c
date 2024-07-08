@@ -6,11 +6,11 @@
 /*   By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 19:49:41 by aporras-          #+#    #+#             */
-/*   Updated: 2024/06/26 15:23:22 by aporras-         ###   ########.fr       */
+/*   Updated: 2024/07/08 22:26:54 by aporras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
 int	ft_char(char c)
 {

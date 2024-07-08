@@ -6,12 +6,11 @@
 /*   By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 12:15:48 by aporras-          #+#    #+#             */
-/*   Updated: 2024/06/28 21:58:21 by aporras-         ###   ########.fr       */
+/*   Updated: 2024/07/08 22:27:23 by aporras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "ft_printf.h"
 
 int	ft_integer(int n)
 {

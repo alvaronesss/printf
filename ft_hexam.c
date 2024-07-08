@@ -6,11 +6,11 @@
 /*   By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 21:52:00 by aporras-          #+#    #+#             */
-/*   Updated: 2024/07/06 17:18:34 by aporras-         ###   ########.fr       */
+/*   Updated: 2024/07/08 22:27:03 by aporras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_printf.h"
 
 int ft_hexam(long long n)
 {

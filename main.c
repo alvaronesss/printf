@@ -6,15 +6,54 @@
 /*   By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 20:47:25 by aporras-          #+#    #+#             */
-/*   Updated: 2024/07/08 21:37:44 by aporras-         ###   ########.fr       */
+/*   Updated: 2024/07/09 16:42:00 by aporras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 #include <stdio.h>
 
 int main()
 {
-	char nombre [] = "alvaro";
+        int	i;
+        int	j;
 
-	printf("mi nombre es %s", nombre);
+        i = 0;
+        j = 0;
+        //prueba
+        // printf("Hola");
+        ft_printf("prueba de ft_print:\n");
+        j = ft_printf("printf: cadena de caracteres: %s\n", "hola punky");
+        i = printf("printf: cadena de caracteres: %s\n", "hola punky");
+        printf("printf : %i\nmyprintf : %i\n\n", i, j);
+
+        j = ft_printf("printf: puntero: %p\n", (void *) 0x12345678);
+        i = printf("printf: puntero: %p\n", (void *) 0x12345678);
+        printf("printf : %i\nmyprintf: %i\n\n", i, j);
+        
+        j = ft_printf("printf: puntero: %p\n", (void *) 0x0);
+        i = printf("printf: puntero: %p\n", (void *) 0x0);
+        printf("printf : %i\nmyprintf: %i\n\n", i, j);
+
+        j = ft_printf("printf: numero hexadecimal: %x\n", -254639852);
+        i = printf("printf: numero hexadecimal: %x\n", -254639852);
+        printf("printf : %i\nmyprintf: %i\n\n", i, j);
+
+        j = ft_printf("printf: numero en formato decimal: %i\n", 2546);
+        i = printf("printf: numero en formato decimal: %i\n", 2546);
+        printf("printf : %i\nmyprintf: %i\n\n", i, j);
+
+        j = ft_printf("printf: numero entero: %d\n", 42);
+        i = printf("printf: numero entero: %d\n", 42);
+        printf("printf : %i\nmyprintf: %i\n\n", i, j);
+
+        j = ft_printf("printf: unsigned %u\n", 5);
+        i = printf("printf: unsigned %u\n", 5);
+        printf("printf : %i\nmyprintf: %i\n\n", i, j);
+		
+ 	j = ft_printf("printf: char %c\n", 'b');
+        i = printf("printf: char %c\n", 'b');
+        printf("printf : %i\nmyprintf: %i\n\n", i, j);
+        return (0);
+
 }

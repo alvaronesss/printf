@@ -6,7 +6,7 @@
 /*   By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 20:51:11 by aporras-          #+#    #+#             */
-/*   Updated: 2024/07/08 22:27:41 by aporras-         ###   ########.fr       */
+/*   Updated: 2024/07/09 13:36:39 by aporras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_pointer(void *n)
 		return (ft_pointer("nil"));
 	ptr = (unsigned long long int)n;
 	ft_str("0x");
-	i = ft_hexam(ptr, "0123456789abcdef");
+	i = ft_hexam(ptr);
 	return (i + 2);
 }

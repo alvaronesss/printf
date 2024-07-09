@@ -6,11 +6,11 @@
 #    By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/08 15:57:50 by aporras-          #+#    #+#              #
-#    Updated: 2024/07/08 21:52:20 by aporras-         ###   ########.fr        #
+#    Updated: 2024/07/09 16:47:03 by aporras-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = ft_printf.a
 
 CC = clang
 
@@ -23,7 +23,7 @@ SRC = \
 	ft_integer.c \
 	ft_nosigno.c \
 	ft_pointer.c \
-	ft_ft_srt.c \
+	ft_str.c \
 			
 OBJS = $(SRC:.c=.o)
 
@@ -33,12 +33,12 @@ $(NAME):$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 bonus: $(OBJS_BONUS)
-	ar rcs $(NAME) $(OBJS_BONUS)
+	ar rcs $(NAME)
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS) $(OBJS_BONUS)
+	rm -f $(OBJS)
 
 fclean: clean
 	 rm -f $(NAME)

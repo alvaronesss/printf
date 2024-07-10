@@ -6,7 +6,7 @@
 /*   By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:57:52 by aporras-          #+#    #+#             */
-/*   Updated: 2024/07/08 22:28:24 by aporras-         ###   ########.fr       */
+/*   Updated: 2024/07/10 18:58:35 by aporras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	ft_str(char *str)
 	int	i;
 
 	i = 0;
+	if (!str)
+		str = "(null)";
 	while (str[i])
 	{
 		write(1, &str[i], 1);

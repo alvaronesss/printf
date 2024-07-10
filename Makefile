@@ -6,17 +6,17 @@
 #    By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/08 15:57:50 by aporras-          #+#    #+#              #
-#    Updated: 2024/07/09 16:47:03 by aporras-         ###   ########.fr        #
+#    Updated: 2024/07/10 18:25:58 by aporras-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 CC = clang
 
 CFLAGS = -Wall -Werror -Wextra
 
-SRC = \
+SRC = ft_printf.c\
 	ft_char.c \
 	ft_hexam.c \
 	ft_hexaM.c \

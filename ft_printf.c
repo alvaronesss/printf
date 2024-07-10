@@ -6,7 +6,7 @@
 /*   By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 17:13:16 by aporras-          #+#    #+#             */
-/*   Updated: 2024/07/09 16:49:33 by aporras-         ###   ########.fr       */
+/*   Updated: 2024/07/10 21:47:29 by aporras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	seleccionar(char c, va_list milista)
 	count = 0;
 	if (c == 'c')
 		count += (ft_char(va_arg(milista, int)));
+	if (c == 'p')
+		count += (ft_pointer(va_arg(milista, long long )));
 	if (c == 's')
 		count += ft_str(va_arg(milista, char *));
 	if (c == 'd' || c == 'i')
@@ -30,10 +32,10 @@ int	seleccionar(char c, va_list milista)
 		count += (ft_nosigno(va_arg(milista, int)));
 
 	if (c == 'x')
-		count += ft_hexam(va_arg(milista, long long));
+		count += ft_hexam(va_arg(milista, unsigned int));
 
 	if (c == 'X')
-		count += ft_hexaM(va_arg(milista, long long));
+		count += ft_hexaM(va_arg(milista, unsigned int));
 
 	if (c == '%')
 		count += ft_char('%');

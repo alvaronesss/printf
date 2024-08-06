@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_unsigned.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/08 21:54:33 by aporras-          #+#    #+#             */
-/*   Updated: 2024/07/11 18:16:34 by aporras-         ###   ########.fr       */
+/*   Created: 2024/06/28 19:36:55 by aporras-          #+#    #+#             */
+/*   Updated: 2024/07/11 18:13:56 by aporras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stddef.h>
-# include <stdarg.h>
+int	ft_unsigned(unsigned int n)
+{
+	unsigned int	count;
+	char			c;
 
-int		ft_printf(char const *str, ...);
-int		ft_char(char c);
-int		ft_hexam(unsigned long long n);
-int		ft_hexa(unsigned long long n);
-int		ft_integer(long n);
-int		ft_str(char *str);
-int		ft_unsigned(unsigned int n);
-int		ft_pointer(long long n);
-
-#endif
+	count = 0;
+	if (n > 9)
+	{
+		count += ft_unsigned(n / 10);
+	}
+	c = (n % 10) + '0';
+	write(1, &c, 1);
+	count++;
+	return (count);
+}

@@ -6,7 +6,7 @@
 /*   By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 17:13:16 by aporras-          #+#    #+#             */
-/*   Updated: 2024/07/10 21:47:29 by aporras-         ###   ########.fr       */
+/*   Updated: 2024/07/11 18:15:21 by aporras-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,12 @@ int	seleccionar(char c, va_list milista)
 		count += ft_str(va_arg(milista, char *));
 	if (c == 'd' || c == 'i')
 		count += (ft_integer(va_arg(milista, int)));
-	
 	if (c == 'u')
-		count += (ft_nosigno(va_arg(milista, int)));
-
+		count += (ft_unsigned(va_arg(milista, int)));
 	if (c == 'x')
 		count += ft_hexam(va_arg(milista, unsigned int));
-
 	if (c == 'X')
-		count += ft_hexaM(va_arg(milista, unsigned int));
-
+		count += ft_hexa(va_arg(milista, unsigned int));
 	if (c == '%')
 		count += ft_char('%');
 	return (count);
@@ -44,16 +40,16 @@ int	seleccionar(char c, va_list milista)
 
 int	ft_printf(char const *str, ...)
 {
-	int i;
-	int count;
-	va_list milista;
+	int		i;
+	int		count;
+	va_list	milista;
 
 	count = 0;
 	i = 0;
-	va_start(milista, str);
-	while(str[i])
+	va_start (milista, str);
+	while (str[i])
 	{
-		if(str[i] == '%')
+		if (str[i] == '%')
 		{
 			i++;
 			count += seleccionar(str[i], milista);

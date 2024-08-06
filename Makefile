@@ -6,7 +6,7 @@
 #    By: aporras- <aporras-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/08 15:57:50 by aporras-          #+#    #+#              #
-#    Updated: 2024/07/10 18:25:58 by aporras-         ###   ########.fr        #
+#    Updated: 2024/07/11 18:14:24 by aporras-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,9 @@ CFLAGS = -Wall -Werror -Wextra
 SRC = ft_printf.c\
 	ft_char.c \
 	ft_hexam.c \
-	ft_hexaM.c \
+	ft_hexa.c \
 	ft_integer.c \
-	ft_nosigno.c \
+	ft_unsigned.c \
 	ft_pointer.c \
 	ft_str.c \
 			
